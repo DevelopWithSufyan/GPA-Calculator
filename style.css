@@ -1,0 +1,111 @@
+body,
+html {
+    margin: 0px;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+    background-image: url(images/background.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#converter {
+    background-color: rgba(0, 0, 0, 0.66);
+    color: white;
+    font-weight: bold;
+    border: 3px solid rgba(255, 255, 0, 0.9);
+    border-radius: 10px;
+    width: 50%;
+    padding: 40px 50px 60px 50px;
+    text-align: center;
+    box-shadow: 10px 10px 50px black;
+}
+
+@media only screen and (max-width: 800px) {
+    #converter {
+        width: 90%;
+    }
+}
+
+.copyright {
+    font-size: 16px;
+    bottom: 5%;
+    color: yellow;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#heading {
+    color: yellow;
+    text-align: center;
+}
+
+table {
+    margin: 20px auto;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table input {
+    width: 100%;
+}
+
+.modal-header,
+.modal-footer {
+    background-color: #333;
+    color: white;
+}
+
+.modal-body {
+    color: black;
+}
+
+input {
+    border: none !important;
+}
+
+.info-line {
+    color: lightsalmon;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.course-heading {
+    font-weight: bold;
+    color: yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#theoryTable,
+#labTable {
+    color: white;
+}
+
+.modal-dialog {
+    border: 3px solid yellow !important;
+    border-radius: 10px;
+}
+
+.borderRadius {
+    border-radius: 5px !important;
+}

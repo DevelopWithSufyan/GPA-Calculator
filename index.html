@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA/CGPA Calculator - SMIU | Developed By Muhammad Sufyan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="icon" type="image/x-icon" href="images/favicon.png"> -->
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Muhammad Sufyan">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="background">
+        <center>
+            <br>
+            <div id="converter">
+                <h1 id="heading">GPA/CGPA Calculator <i class="fa fa-calculator"></i></h1>
+                <p class="info-line">
+                    "This Calculator is based on the SMIU grading system."</p>
+
+                <h3 class="course-heading">
+                    Theory Courses</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="theoryTable">
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Marks (out of 100)</th>
+                            <th>Action</th>
+                        </tr>
+                    </table>
+                </div>
+                <button id="addTheory" class="btn btn-info mb-3 w-100">Add Theory Course</button>
+
+                <h3 class="course-heading">
+                    Lab Courses</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="labTable">
+                        <tr>
+                            <th>Lab Name</th>
+                            <th>Credit Hours</th>
+                            <th>Marks (out of 50)</th>
+                            <th>Action</th>
+                        </tr>
+                    </table>
+                </div>
+                <button id="addLab" class="btn btn-info mb-3 w-100">Add Lab</button>
+                <br>
+                <button id="calculate" class="btn btn-success w-100">Calculate</button>
+            </div>
+        </center>
+        <p class="copyright">This Website is designed by Muhammad Sufyan &copy; 2025 - All Rights Reserved</p>
+        <br>
+
+    </div>
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content borderRadius">
+                <div class="modal-header borderRadius">
+                    <h5 class="modal-title" id="resultModalLabel">GPA Results</h5>
+                    <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                </div>
+                <div class="modal-footer borderRadius">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
