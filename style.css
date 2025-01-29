@@ -33,8 +33,12 @@ body::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 800px) {
+    body, html {
+        font-size: 12px;
+    }
     #converter {
-        width: 90%;
+        width: 93%;
+        padding: 30px 10px;
     }
 }
 
