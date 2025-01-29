@@ -22,21 +22,23 @@ const modalBody = document.getElementById("modalBody");
 addTheory.addEventListener("click", () => {
     const row = theoryTable.insertRow();
     row.innerHTML = `
-                <td><input type="text" placeholder="Course Name"></td>
-                <td>3</td>
-                <td><input type="number" min="0" max="100" placeholder="Marks"></td>
-                <td><button class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()">Delete</button></td>
-            `;
+        <td><input type="text" placeholder="Course Name"></td>
+        <td>3</td>
+        <td><input type="number" class="theory-marks" min="0" max="100" placeholder="Marks"></td>
+        <td><button class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()">Delete</button></td>
+    `;
+    validateInputs();
 });
 
 addLab.addEventListener("click", () => {
     const row = labTable.insertRow();
     row.innerHTML = `
-                <td><input type="text" placeholder="Lab Name"></td>
-                <td>1</td>
-                <td><input type="number" min="0" max="50" placeholder="Marks"></td>
-                <td><button class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()">Delete</button></td>
-            `;
+        <td><input type="text" placeholder="Lab Name"></td>
+        <td>1</td>
+        <td><input type="number" class="lab-marks" min="0" max="50" placeholder="Marks"></td>
+        <td><button class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()">Delete</button></td>
+    `;
+    validateInputs();
 });
 
 calculate.addEventListener("click", () => {
@@ -68,7 +70,12 @@ calculate.addEventListener("click", () => {
     }
 
     const finalGPA = totalGPA / totalCredits;
-    resultHTML += `</ul><h5>Total GPA: ${finalGPA.toFixed(2)}</h5>`;
+    if(finalGPA > 0.1){
+        resultHTML += `</ul><h5>Total GPA: ${finalGPA.toFixed(2)}</h5>`;
+    }
+    else {
+        resultHTML += `</ul><h5 style="color: red; font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif;" >Total GPA: Insert Marks Properly!</h5>`;
+    }
 
     modalBody.innerHTML = resultHTML;
     const resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
@@ -83,3 +90,21 @@ function getGPA(marks) {
     }
     return 0;
 }
+
+// Function to Validate Inputs (Restricts Values)
+function validateInputs() {
+    document.querySelectorAll(".theory-marks").forEach(input => {
+        input.addEventListener("input", function () {
+            if (this.value < 0) this.value = 0;
+            if (this.value > 100) this.value = 100;
+        });
+    });
+
+    document.querySelectorAll(".lab-marks").forEach(input => {
+        input.addEventListener("input", function () {
+            if (this.value < 0) this.value = 0;
+            if (this.value > 50) this.value = 50;
+        });
+    });
+}
+validateInputs();
