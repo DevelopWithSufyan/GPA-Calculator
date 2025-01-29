@@ -14,7 +14,8 @@ body::-webkit-scrollbar {
 }
 
 .background {
-    background-image: url(images/background.webp);
+    /* background: url(images/background.webp); */
+    background-color: #00172e;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,6 +31,9 @@ body::-webkit-scrollbar {
     padding: 40px 50px 60px 50px;
     text-align: center;
     box-shadow: 10px 10px 50px black;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+    border: 3px solid rgba(255, 215, 0, 0.9); /* Gold Border */
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -43,29 +47,32 @@ body::-webkit-scrollbar {
 }
 
 .copyright {
-    font-size: 16px;
+    font-size: 14px;
     bottom: 5%;
     color: yellow;
-    -webkit-text-stroke-width: 1px;
+    /* -webkit-text-stroke-width: 1px; */
     -webkit-text-stroke-color: black;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-shadow: 5px 5px 10px black;
     text-align: center;
     margin-top: 20px;
 }
 
 #heading {
-    color: yellow;
+    /* color: yellow; */
+    color: gold;
     text-align: center;
 }
 
 table {
     margin: 20px auto;
     color: white;
+    /* border-radius: 5px !important; */
 }
 
 table th,
 table td {
+    /* border-radius: 50px !important; */
     padding: 10px;
     text-align: center;
 }
@@ -89,20 +96,20 @@ input {
 }
 
 .info-line {
-    color: lightsalmon;
+    color: thistle;
     font-style: italic;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .course-heading {
     font-weight: bold;
-    color: yellow;
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #theoryTable,
 #labTable {
-    color: white;
+    color: gainsboro;
 }
 
 .modal-dialog {
