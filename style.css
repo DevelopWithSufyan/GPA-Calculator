@@ -14,11 +14,11 @@ body::-webkit-scrollbar {
 }
 
 .background {
-    /* background: url(images/background.webp); */
     background-color: #00172e;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 120vh;
 }
 
 #converter {
@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
     text-align: center;
     box-shadow: 10px 10px 50px black;
     box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
-    border: 3px solid rgba(255, 215, 0, 0.9); /* Gold Border */
+    border: 3px solid rgba(255, 215, 0, 0.9); 
 
 }
 
@@ -50,16 +50,13 @@ body::-webkit-scrollbar {
     font-size: 14px;
     bottom: 5%;
     color: yellow;
-    /* -webkit-text-stroke-width: 1px; */
     -webkit-text-stroke-color: black;
-    /* font-weight: bold; */
     text-shadow: 5px 5px 10px black;
     text-align: center;
     margin-top: 20px;
 }
 
 #heading {
-    /* color: yellow; */
     color: gold;
     text-align: center;
 }
@@ -67,12 +64,10 @@ body::-webkit-scrollbar {
 table {
     margin: 20px auto;
     color: white;
-    /* border-radius: 5px !important; */
 }
 
 table th,
 table td {
-    /* border-radius: 50px !important; */
     padding: 10px;
     text-align: center;
 }
